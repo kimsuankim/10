@@ -5,10 +5,19 @@
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
 int main(int argc, char *argv[]) {
-	char src[]="happy C programming";
-	
-	printf("문자열 \"%s\"의 길이 : %i\n", src, strlen(src));
-	
+	char str[100];
+	int i;
+	FILE* fp;
+	//openfile
+	fp = fopen("sample.txt","w");
+	//write file
+	for (i=0; i<3; i++){
+	printf("input a word:");
+	scanf("%s", str); //str자체가 포인터 
+	fprintf(fp, "%s\n", str);
+    }
+	//close file
+	fclose(fp);
 	
 	return 0;
 }
