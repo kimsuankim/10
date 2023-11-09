@@ -5,21 +5,10 @@
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
 int main(int argc, char *argv[]) {
-	char c;
-	FILE* fp;
+	char code1 = 'A';
+	int code2 = 65;
 	
-	fp = fopen("sample.txt", "r");
-	if (fp == NULL)
-	{
-		printf("failed to open\n");
-		return 0;
-	}
-	
-	while((c=fgetc(fp))!= EOF)// 파일에서 한글자 긁어온게  
-	{
-		putchar(c); // 한글자 출력 
-	}
-	
-	fclose(fp);
+	printf("code1 = %c, (%d)\n", code1, code1);
+	printf("code2 = %c, (%d)\n", code2, code2);
 	return 0;
 }
